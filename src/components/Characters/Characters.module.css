@@ -1,0 +1,108 @@
+.root {
+}
+.character {
+  height: 122px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 10;
+  top: -12px;
+}
+
+.anotherCharacter {
+  left: -94px;
+  transform: rotate(-12deg);
+  top: -2px;
+}
+
+/* 
+body {
+  background: #368dda;
+} */
+
+.bubbleSpeech {
+  /* position: absolute;
+  top: -112px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 100px;
+  width: 150px;
+  overflow-y: hidden; */
+
+  background: #fff;
+  border-radius: 12px;
+  @apply border-solid border border-brightGreen;
+  padding: 6px;
+  padding-top: 10px;
+  text-align: center;
+  color: transparent;
+
+  position: absolute;
+  /* top: -112px; */
+  bottom: 24px;
+  width: 260px;
+  font-size: 12px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 100px;
+
+  box-sizing: border-box;
+}
+
+.bubble {
+  background: #fff;
+  border-radius: 12px;
+  @apply border-solid border border-brightGreen;
+  padding: 6px;
+  padding-top: 10px;
+  text-align: center;
+  color: #000;
+
+  position: absolute;
+  /* top: -112px; */
+  bottom: 24px;
+  width: 260px;
+  font-size: 12px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 100px;
+  overflow-y: scroll;
+  z-index: 15;
+
+  box-sizing: border-box;
+}
+
+.bubbleBottomLeft:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  @apply border-solid border-l-[24px] border-r-[12px] border-t-[12px] border-b-[20px] border-brightGreen border-r-transparent border-b-transparent;
+
+  /* border-left: 24px solid #000;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #000;
+  border-bottom: 20px solid transparent; */
+  right: 70px;
+  bottom: -24px;
+}
+
+.asd {
+  shape-outside: ellipse(100px 200px at 50% 50%);
+  width: 150px;
+  height: 100px;
+  float: left;
+  opacity: 0.2;
+}
+
+.text {
+  position: relative;
+}
