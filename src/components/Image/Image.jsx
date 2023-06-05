@@ -5,7 +5,7 @@ import Characters from "../Characters/Characters";
 function Image(props) {
   return (
     <div>
-      <Characters speechBubbles={props.speechBubbles} isMother={props.isMother} isMari={props.isMari} />
+      <Characters currentChapter={props.currentChapter} speechBubbles={props.speechBubbles} isMother={props.isMother} isMari={props.isMari} />
       <img
         className={classes.image}
         src={

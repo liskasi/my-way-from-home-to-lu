@@ -10,12 +10,12 @@ const chapters = [
       en: "Introduction",
     },
     image: "autumnVyborg",
-    speechBubbles: {
-      //update
-      bubble: {
-        me: "Hey there! I'm Lisa, a 20-year-old from Vyborg, Russia. During my school years, I was all over the place trying out different things. I did gymnastics, attended music school where I successfully completed piano classes, played tennis, and took drawing and filmmaking classes—you name it! Additionally to school which I finished with distinction and honours, I studied English, Physics, and Informatics. With such a wide range of experiences, I ended up choosing to continue my journey in the field of ITC. I found it super exciting, especially because I had an amazing teacher who made our classes fascinating and taught me a ton.",
+    speechBubbles: [
+      {
+        owner: "me",
+        text: "Hey there! I'm Lisa, a 20-year-old from Vyborg, Russia. During my school years, I was all over the place trying out different things. I did gymnastics, attended music school where I successfully completed piano classes, played tennis, and took drawing and filmmaking classes—you name it! Additionally to school which I finished with distinction and honours, I studied English, Physics, and Informatics. With such a wide range of experiences, I ended up choosing to continue my journey in the field of ITC. I found it super exciting, especially because I had an amazing teacher who made our classes fascinating and taught me a ton.",
       },
-    },
+    ],
   },
   {
     title: {
@@ -27,11 +27,22 @@ const chapters = [
     attributes: {
       mari: true,
     },
-    speechBubbles: {
-      bubble: {
-        mari: "bla",
+    speechBubbles: [
+      {
+        owner: "me",
+        text: "This is my friend Mariia who graduated last year",
+        timeout: 3500
       },
-    },
+      {
+        owner: "mari",
+        text: "Hello Lisa, did you know that I’m studying in Vilnius, Lithuania?",
+        timeout: 4000
+      },
+      {
+        owner: "me",
+        text: "She provided me with detailed information regarding studying abroad, including application requirements, pricing aspects, suggestions for potential universities, the benefits of studying in a foreign country, and comprehensive details about how Erasmus programs function. As I got more engrossed in the idea, studying abroad started feeling more achievable and realistic for me. Yet, I faced a dilemma—I couldn't decide whether to study in the absolutely lovely city of Saint Petersburg or venture out and explore a completely new place.",
+      },
+    ],
   },
   {
     title: {
@@ -44,16 +55,22 @@ const chapters = [
       mother: true,
       unis: true,
     },
-    speechBubbles: {
-      bubble: {
-        me: [
-          "So, I decided to tell my mom about Mariia's story, and it turned out she got really inspired too.",
-          "Excited by the idea, we started checking out universities in the Baltic countries and ended up with four choices: LU, RTU, and two universities in Kaunas, Lithuania. We were really drawn to these options because they had great locations, affordable prices, and interesting subjects, they also presented a wide range of opportunities.",
-        ],
-        mother:
-          "Honestly, I had thought about sending my kids (Lisa and her brother) to study abroad before, but I never really considered the Baltic states as an option. Among our friends, Finland and Germany seemed to be the top choices for studying abroad.",
+    speechBubbles: [
+      {
+        owner: "me",
+        text: "So, I decided to tell my mom about Mariia's story, and it turned out she got really inspired too.",
+        timeout: 4000
       },
-    },
+      {
+        owner: "mother",
+        text: "Honestly, I had thought about sending my kids (Lisa and her brother) to study abroad before, but I never really considered the Baltic states as an option. Among our friends, Finland and Germany seemed to be the top choices for studying abroad.",
+        timeout: 15000      
+      },
+      {
+        owner: "me",
+        text: "Excited by the idea, we started checking out universities in the Baltic countries and ended up with four choices: LU, RTU, and two universities in Kaunas, Lithuania. We were really drawn to these options because they had great locations, affordable prices, and interesting subjects, they also presented a wide range of opportunities.",
+      },
+    ],
   },
   {
     title: {
@@ -61,11 +78,7 @@ const chapters = [
       en: "Preparation",
     },
     image: "springVyborg",
-    speechBubbles: {
-      bubble: {
-        me: "bla-bla",
-      },
-    },
+    speechBubbles: [{ owner: "me", text: "bla-bla" }],
   },
   {
     title: {
@@ -74,11 +87,7 @@ const chapters = [
     },
     image: "summerVyborg",
     month: "june",
-    speechBubbles: {
-      bubble: {
-        me: "bla-bla",
-      },
-    },
+    speechBubbles: [{ owner: "me", text: "bla-bla" }],
   },
   {
     title: {
@@ -90,11 +99,7 @@ const chapters = [
     attributes: {
       cap: true,
     },
-    speechBubbles: {
-      bubble: {
-        me: "bla-bla",
-      },
-    },
+    speechBubbles: [{ owner: "me", text: "bla-bla" }],
   },
   {
     title: {
@@ -106,11 +111,7 @@ const chapters = [
     attributes: {
       bus: true,
     },
-    speechBubbles: {
-      bubble: {
-        me: "bla-bla",
-      },
-    },
+    speechBubbles: [{ owner: "me", text: "bla-bla" }],
   },
 ];
 
@@ -138,6 +139,7 @@ function Main() {
         speechBubbles={chapters[currentChapter].speechBubbles}
         isMother={chapters[currentChapter].attributes?.mother}
         isMari={chapters[currentChapter].attributes?.mari}
+        currentChapter={currentChapter}
       />
     </div>
   );
