@@ -11,7 +11,7 @@ function SpeechBubbles(props) {
   }, [props.currentChapter]);
 
   if (currentBubbleText !== props.speechBubbles[currentBubbleOrder]?.text)
-    setCurrentBubbleText(props.speechBubbles[currentBubbleOrder].text);
+    setCurrentBubbleText(props.speechBubbles[currentBubbleOrder]?.text);
 
   useEffect(() => {
     if (currentBubbleOrder + 1 < props.speechBubbles.length) {
@@ -27,12 +27,12 @@ function SpeechBubbles(props) {
       {props.speechBubbles.length === 1 && (
         <div>
           <div className={`${classes.bubble} `}>
-            <p className={classes.text}>{props.speechBubbles[0].text}</p>
+            <p className={classes.text}>{props.speechBubbles[0]?.text}</p>
           </div>
           <div
             className={`${classes.bubbleSpeech} ${classes.bubbleBottomRight}`}
           >
-            {props.speechBubbles[0].text}
+            {props.speechBubbles[0]?.text}
           </div>
         </div>
       )}
