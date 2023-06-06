@@ -1,0 +1,59 @@
+:root {
+  --rotate-to: 450deg;
+}
+
+.root {
+    position: relative;
+}
+
+@keyframes animation1 {
+  from {
+    opacity: 1;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-50%) rotate(var(--rotate-to));
+  }
+}
+
+@keyframes animation2 {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) rotate(var(--rotate-to));
+  }
+}
+
+.planetsWrapper {
+  position: relative;
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  width: 100%;
+  transition: all;
+}
+
+.planet:nth-child(1) {
+  opacity: 1;
+}
+
+.planet:nth-child(2) {
+  opacity: 0;
+}
+
+.animatedPlanet:nth-child(1) {
+  animation: animation1 3s ease-in-out;
+}
+
+.animatedPlanet:nth-child(2) {
+  animation: animation2 3s ease-in-out;
+}

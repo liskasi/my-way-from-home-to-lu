@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./Main.module.css";
-import Image from "../Image/Image";
+import SeasonSlider from "../SeasonSlider/SeasonSlider";
 import Navigation from "../Navigation/Navigation";
 
 const chapters = [
@@ -117,14 +117,29 @@ const chapters = [
 
 function Main() {
   const [currentChapter, setCurrentChapter] = useState(0);
+  const [isAnimation, setIsAnimation] = useState(false);
 
   const switchChapter = (e) => {
-    const direction = e.target.getAttribute("data-value");
-    if (direction === "next") {
-      setCurrentChapter(currentChapter + 1);
-    } else {
-      setCurrentChapter(currentChapter - 1);
+    if (isAnimation) {
+      return;
     }
+
+    const direction = e.target.getAttribute("data-value");
+    const isNext = direction === "next";
+    const rotateTo = isNext ? '450deg' : '-270deg';
+
+    document.documentElement.style.setProperty('--rotate-to', rotateTo);
+    setIsAnimation(true);
+
+    setTimeout(() => {
+      setIsAnimation(false);
+
+      if (isNext) {
+        setCurrentChapter(currentChapter + 1);
+      } else if (currentChapter !== 0) {
+        setCurrentChapter(currentChapter - 1);
+      }
+    }, 3000);
   };
 
   return (
@@ -134,12 +149,14 @@ function Main() {
         currentChapter={currentChapter}
         title={chapters[currentChapter].title.en}
       />
-      <Image
+      <SeasonSlider
         imageName={chapters[currentChapter].image}
         speechBubbles={chapters[currentChapter].speechBubbles}
         isMother={chapters[currentChapter].attributes?.mother}
         isMari={chapters[currentChapter].attributes?.mari}
         currentChapter={currentChapter}
+        chapters={chapters}
+        isAnimation={isAnimation}
       />
     </div>
   );
