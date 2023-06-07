@@ -10,7 +10,10 @@ module.exports = {
         brightGreen: "#658304",
       },
       screens: {
-        'xs': {'max': '640px'},
+        // 'xs': {'max': '480px'},
+        '2xs': '400px',
+        'xs': '480px',
+        // 'xs': {'max': '640px'},
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
   

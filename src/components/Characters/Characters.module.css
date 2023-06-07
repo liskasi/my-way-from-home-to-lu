@@ -1,4 +1,5 @@
 .root {
+  /* position: relative; */
 }
 .character {
   height: 122px;
@@ -9,12 +10,13 @@
   margin-right: auto;
   z-index: 10;
   top: -220px;
+  @apply h-[100px] -top-[56vw] 2xs:h-[100px] 2xs:-top-[46vw] xs:-top-[44vw] sm:h-[150px] sm:-top-[44vw] md:h-[200px]  md:-top-[46vw] lg:h-[250px] lg:-top-[46vw] xl:h-[250px] xl:-top-[42vw] 2xl:h-[300px] 2xl:-top-[39vw];
 }
 
 .anotherCharacter {
-  left: -94px;
+  @apply -left-[76px] sm:-left-[120px] md:-left-[155px] lg:-left-[192px] xl:-left-[220px];
   transform: rotate(-12deg);
-  top: -210px;
+  @apply -top-[53vw] 2xs:-top-[45vw] xs:-top-[43vw] sm:-top-[43vw] md:-top-[44vw] lg:-top-[45vw] xl:-top-[41vw] 2xl:-top-[38vw];
 }
 
 /* 

@@ -4,17 +4,25 @@ import classes from "./Navigation.module.css";
 function Navigation(props) {
   return (
     <div className={classes.root}>
-      {props.currentChapter > 0 && (
-        <div onClick={props.onClick} data-value="back">
+      <div className={classes.back}>
+        <button
+          onClick={props.onClick}
+          data-value="back"
+          disabled={props.currentChapter > 0 ? false : true}
+        >
           back
-        </div>
-      )}
-      <div>{props.title}</div>
-      {props.currentChapter < 6 && (
-        <div onClick={props.onClick} data-value="next">
+        </button>
+      </div>
+      <div className={classes.title}>{props.title}</div>
+      <div className={classes.next}>
+        <button
+          onClick={props.onClick}
+          data-value="next"
+          disabled={props.currentChapter < 6 ? false : true}
+        >
           next
-        </div>
-      )}
+        </button>
+      </div>
     </div>
   );
 }

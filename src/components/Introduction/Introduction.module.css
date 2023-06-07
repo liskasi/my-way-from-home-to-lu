@@ -8,5 +8,9 @@
     padding-top: 40px;
     padding-bottom: 5px;
     width: 100%;
-    @apply xs:bottom-0 xs:flex xs:self-end;
+    @apply bottom-0 flex self-end xs:h-full;
+}
+
+.hello {
+    @apply 2xs:hidden;
 }

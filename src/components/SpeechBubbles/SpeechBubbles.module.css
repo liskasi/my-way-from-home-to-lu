@@ -21,15 +21,16 @@
   color: transparent;
 
   position: absolute;
-  /* top: -112px; */
-  bottom: 240px;
-  width: 260px;
-  font-size: 12px;
+  @apply bottom-[60vw] 2xs:bottom-[48vw] xl:bottom-[44vw] 2xl:bottom-[42vw];
+  /* bottom: 240px; */
+  /* width: 260px; */
+  @apply w-[230px] 2xs:w-[260px] lg:w-[400px] 2xl:w-[350px];
+  @apply text-xs lg:text-lg;
   right: 0;
   left: 0;
   margin-right: auto;
   margin-left: auto;
-  max-height: 100px;
+  @apply max-h-[100px] lg:max-h-[200px] xl:max-h-[100px];
 
   box-sizing: border-box;
 }
@@ -44,15 +45,16 @@
   color: #000;
 
   position: absolute;
-  /* top: -112px; */
-  bottom: 240px;
-  width: 260px;
-  font-size: 12px;
+  bottom: 50vw;
+  @apply bottom-[60vw] 2xs:bottom-[48vw] xl:bottom-[44vw] 2xl:bottom-[42vw];
+  @apply w-[230px] 2xs:w-[260px] lg:w-[400px] 2xl:w-[350px];
+  @apply text-xs lg:text-lg;
   right: 0;
   left: 0;
   margin-right: auto;
   margin-left: auto;
   max-height: 100px;
+  @apply max-h-[100px] lg:max-h-[200px] xl:max-h-[100px];
   overflow-y: scroll;
   z-index: 15;
 

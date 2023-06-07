@@ -1,8 +1,21 @@
 .root {
-    @apply flex;
+    @apply grid grid-cols-3;
 
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+}
+
+.back {
+    text-align: left;
+}
+
+.title {
+    text-align: center;
+
+}
+
+.next {
+    text-align: right;
 }

@@ -2,8 +2,5 @@
     @apply h-screen;
     @apply relative;
     @apply overflow-y-hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @apply flex flex-col justify-center sm:justify-end;
 }
