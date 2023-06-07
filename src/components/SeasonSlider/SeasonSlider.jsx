@@ -9,7 +9,8 @@ function SeasonSlider({
 	isMari,
 	speechBubbles,
   isAnimation,
-  isBack
+  isBack,
+  language
 }) {
 
 	let currAndNextImages = chapters.slice(
@@ -25,26 +26,27 @@ function SeasonSlider({
 		const imageSrc =
 			process.env.PUBLIC_URL + `/assets/background/${image}.svg`;
 
-    const imgClasses = isAnimation ? `${classes.planet} ${classes.animatedPlanet}` : classes.planet;
+    const imgClasses = isAnimation
+      ? `${classes.planet} ${classes.animatedPlanet}`
+      : classes.planet;
 
-		return (
-			<img className={imgClasses} src={imageSrc} alt="Logo" />
-		);
-	}
+    return <img className={imgClasses} src={imageSrc} alt="Logo" />;
+  }
 
-	return (
-		<div>
-			<Characters
-				currentChapter={currentChapter}
-				speechBubbles={speechBubbles}
-				isMother={isMother}
-				isMari={isMari}
-			/>
-			<div className={`${classes.planetsWrapper}`}>
-				{currAndNextImages.map(renderImage)}
-			</div>
-		</div>
-	);
+  return (
+    <div>
+      <Characters
+        currentChapter={currentChapter}
+        speechBubbles={speechBubbles}
+        isMother={isMother}
+        isMari={isMari}
+		    language={language}
+      />
+      <div className={`${classes.planetsWrapper}`}>
+        {currAndNextImages.map(renderImage)}
+      </div>
+    </div>
+  );
 }
 
 export default SeasonSlider;

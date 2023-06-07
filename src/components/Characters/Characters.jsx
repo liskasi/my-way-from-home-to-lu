@@ -2,26 +2,26 @@ import React from "react";
 import classes from "./Characters.module.css";
 import SpeechBubbles from "../SpeechBubbles/SpeechBubbles";
 
-function Characters(props) {
+function Characters({currentChapter, speechBubbles, isMother, isMari, language}) {
   return (
     <div className={classes.root}>
-      <SpeechBubbles currentChapter={props.currentChapter} speechBubbles={props.speechBubbles} />
+      <SpeechBubbles currentChapter={currentChapter} speechBubbles={speechBubbles} language={language} />
       {/* <div>
         <div className={`${classes.bubble} `}>
-          <p className={classes.text}>{props.speechBubbles?.bubble?.me}</p>
+          <p className={classes.text}>{speechBubbles?.bubble?.me}</p>
         </div>
         <div className={`${classes.bubbleSpeech} ${classes.bubbleBottomLeft}`}>
-          {props.speechBubbles?.bubble?.me}
+          {speechBubbles?.bubble?.me}
         </div>
       </div> */}
 
-      {(props.isMother || props.isMari) && (
+      {(isMother || isMari) && (
         <img
           className={`${classes.character} ${classes.anotherCharacter}`}
           src={
             process.env.PUBLIC_URL +
             `/assets/characters/${
-              props.isMother ? "mother" : props.isMari ? "mari" : ""
+              isMother ? "mother" : isMari ? "mari" : ""
             }.svg`
           }
           alt="Logo"
