@@ -118,6 +118,7 @@ const chapters = [
 function Main() {
   const [currentChapter, setCurrentChapter] = useState(0);
   const [isAnimation, setIsAnimation] = useState(false);
+  const [isBack, setIsBack] = useState(false);
 
   const switchChapter = (e) => {
     if (isAnimation) {
@@ -131,15 +132,20 @@ function Main() {
     document.documentElement.style.setProperty('--rotate-to', rotateTo);
     setIsAnimation(true);
 
+    if (!isNext) {
+      setIsBack(true);
+    }
+
     setTimeout(() => {
       setIsAnimation(false);
+      setIsBack(false);
 
       if (isNext) {
         setCurrentChapter(currentChapter + 1);
       } else if (currentChapter !== 0) {
         setCurrentChapter(currentChapter - 1);
       }
-    }, 3000);
+    }, 2900);
   };
 
   return (
@@ -157,6 +163,7 @@ function Main() {
         currentChapter={currentChapter}
         chapters={chapters}
         isAnimation={isAnimation}
+        isBack={isBack}
       />
     </div>
   );

@@ -8,12 +8,18 @@ function SeasonSlider({
 	isMother,
 	isMari,
 	speechBubbles,
-  isAnimation
+  isAnimation,
+  isBack
 }) {
-	const currAndNextImages = chapters.slice(
+
+	let currAndNextImages = chapters.slice(
 		currentChapter,
 		currentChapter + 2
 	);
+
+  if (isBack) {
+    currAndNextImages = chapters.slice(currentChapter - 1, currentChapter + 1).reverse();
+  }
 
 	function renderImage({ image }) {
 		const imageSrc =
