@@ -10,7 +10,7 @@
 }
 
 .arrow {
-    @apply w-[30px] h-[30px];
+    @apply w-[15px] h-[15px] sm:w-[30px] sm:h-[30px];
     @apply border-solid border-brightGreen hover:border-r-2 hover:border-b-2 disabled:border-r disabled:border-b disabled:border-lightYellow;
     
     /* border: solid black; */
@@ -32,8 +32,8 @@
 }
 
 .title {
+    @apply text-[20px] sm:text-[28px];
     text-align: center;
-    font-size: 28px;
     color: #838383;
 }
 
