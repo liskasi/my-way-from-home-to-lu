@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Main.module.css";
 import SeasonSlider from "../SeasonSlider/SeasonSlider";
+
 import Navigation from "../Navigation/Navigation";
 
 const chapters = [
@@ -10,6 +11,10 @@ const chapters = [
       en: "Introduction",
     },
     image: "autumnVyborg",
+    clock: {
+      hours: 9,
+      minutes: 50
+    },
     speechBubbles: [
       {
         owner: "me",
@@ -27,6 +32,10 @@ const chapters = [
     },
     image: "autumnVyborg",
     month: "october",
+    clock: {
+      hours: 10,
+      minutes: 30
+    },
     attributes: {
       mari: true,
     },
@@ -63,6 +72,10 @@ const chapters = [
     },
     image: "winterVyborg",
     month: "december",
+    clock: {
+      hours: 11,
+      minutes: 55
+    },
     attributes: {
       mother: true,
       unis: true,
@@ -99,6 +112,10 @@ const chapters = [
       en: "Preparation",
     },
     image: "springVyborg",
+    clock: {
+      hours: 12,
+      minutes: 12
+    },
     speechBubbles: [{ owner: "me", text: { en: "aaaaaaa", ru: "фывфыв" } }],
   },
   {
@@ -108,6 +125,10 @@ const chapters = [
     },
     image: "summerVyborg",
     month: "june",
+    clock: {
+      hours: 3,
+      minutes: 5
+    },
     speechBubbles: [{ owner: "me", text: { en: "asddsdar", ru: "фрфрфрр" } }],
   },
   {
@@ -120,6 +141,10 @@ const chapters = [
     attributes: {
       cap: true,
     },
+    clock: {
+      hours: 7,
+      minutes: 40
+    },
     speechBubbles: [{ owner: "me", text: { en: "bla", ru: "фыв" } }],
   },
   {
@@ -131,6 +156,10 @@ const chapters = [
     month: "august",
     attributes: {
       bus: true,
+    },
+    clock: {
+      hours: 8,
+      minutes: 35
     },
     speechBubbles: [{ owner: "me", text: { en: "asdads", ru: "длоав" } }],
   },
@@ -186,7 +215,10 @@ function Main({ language }) {
         isAnimation={isAnimation}
         isBack={isBack}
         language={language}
+        clock={chapters[currentChapter].clock}
       />
+            {/* <Clock clock={chapters[currentChapter].clock} /> */}
+
     </div>
   );
 }

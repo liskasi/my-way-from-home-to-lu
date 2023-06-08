@@ -8,6 +8,7 @@ module.exports = {
         lightGreen: "#E9EDC9",
         green: "#CCD5AE",
         brightGreen: "#658304",
+        lightBrown: "#D4A373"
       },
       screens: {
         // 'xs': {'max': '480px'},
