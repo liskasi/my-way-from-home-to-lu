@@ -2,16 +2,6 @@
 }
 
 .bubbleSpeech {
-  /* position: absolute;
-    top: -112px;
-    right: 0;
-    left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    max-height: 100px;
-    width: 150px;
-    overflow-y: hidden; */
-
   background: #fff;
   border-radius: 12px;
   @apply border-solid border border-brightGreen;
@@ -21,7 +11,7 @@
   color: transparent;
 
   position: absolute;
-  @apply bottom-[60vw] 2xs:bottom-[48vw] xl:bottom-[44vw] 2xl:bottom-[42vw];
+  @apply bottom-[60vw] 2xs:bottom-[48vw] xl:bottom-[44vw] 2xl:bottom-[39vw];
   /* bottom: 240px; */
   /* width: 260px; */
   @apply w-[230px] 2xs:w-[260px] lg:w-[400px] 2xl:w-[350px];
@@ -46,7 +36,7 @@
 
   position: absolute;
   bottom: 50vw;
-  @apply bottom-[60vw] 2xs:bottom-[48vw] xl:bottom-[44vw] 2xl:bottom-[42vw];
+  @apply bottom-[60vw] 2xs:bottom-[48vw] xl:bottom-[44vw] 2xl:bottom-[39vw];
   @apply w-[230px] 2xs:w-[260px] lg:w-[400px] 2xl:w-[350px];
   @apply text-xs lg:text-lg;
   right: 0;
@@ -55,11 +45,32 @@
   margin-left: auto;
   max-height: 100px;
   @apply max-h-[100px] lg:max-h-[200px] xl:max-h-[100px];
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 15;
 
   box-sizing: border-box;
 }
+
+  .bubble::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .bubble::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .bubble::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .bubble::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+
 
 .bubbleBottomRight:before {
   content: "";

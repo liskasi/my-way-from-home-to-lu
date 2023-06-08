@@ -4,18 +4,45 @@
     position: absolute;
     top: 0;
     width: 100%;
+    padding-top: 86px;
+
     /* justify-content: space-between; */
 }
 
+.arrow {
+    @apply w-[30px] h-[30px];
+    @apply border-solid border-brightGreen hover:border-r-2 hover:border-b-2 disabled:border-r disabled:border-b disabled:border-lightYellow;
+    
+    /* border: solid black; */
+    @apply border-0 border-r border-b;
+    /* border-width: 0 3px 3px 0; */
+    /* display: inline-block; */
+    padding: 3px;
+  }
+
 .back {
+    /* text-align: left; */
+    transform: rotate(135deg);
+}
+
+.backButton {
     text-align: left;
+    padding-left: 86px;
+
 }
 
 .title {
     text-align: center;
-
+    font-size: 28px;
+    color: #838383;
 }
 
 .next {
+    /* text-align: right; */
+    transform: rotate(-45deg);
+}
+
+.nextButton {
     text-align: right;
+    padding-right: 86px;
 }

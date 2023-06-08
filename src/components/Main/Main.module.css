@@ -1,6 +1,6 @@
 .root {
     @apply h-screen;
     @apply relative;
-    @apply overflow-y-hidden;
+    @apply overflow-hidden;
     @apply flex flex-col justify-center sm:justify-end;
 }
