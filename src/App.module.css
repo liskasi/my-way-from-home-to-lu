@@ -16,3 +16,9 @@
 .menu {
   @apply flex gap-3;
 }
+
+.msg {
+  text-align: center;
+  /* position: fixed; */
+  /* bottom: 0; */
+}
