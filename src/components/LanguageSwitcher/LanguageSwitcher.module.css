@@ -1,3 +1,14 @@
 .root {
+    padding-right: 20px;
+    align-self: center;
+}
 
+.select {
+    background: none;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.option {
+    font-size: 20px;
 }

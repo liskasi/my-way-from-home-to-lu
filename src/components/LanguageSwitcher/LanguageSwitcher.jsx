@@ -8,9 +8,9 @@ function LanguageSwitcher({ language, setLanguage }) {
 
   return (
     <div className={classes.root}>
-      <select value={language} onChange={handleChange}>
-        <option value="ru">Ru</option>
-        <option value="en">En</option>
+      <select className={classes.select} value={language} onChange={handleChange}>
+        <option className={classes.option} value="ru">Ru</option>
+        <option className={classes.option} value="en">En</option>
       </select>
     </div>
   );
