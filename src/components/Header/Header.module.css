@@ -1,7 +1,22 @@
 .root {
-    @apply bg-lightGreen h-[60px] flex justify-between;
+    @apply bg-green h-[60px] flex justify-between;
 }
 
 .menu {
-    @apply flex gap-3;
+    @apply flex;
+}
+
+.item {
+  align-self: center;
+  padding: 0 60px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  @apply: hover:hover;
+  @apply hover:border-b-[5px] hover:border-solid hover:border-lightGreen  hover:pt-[5px] hover:bg-gradient-to-b hover:from-transparent hover:to-lightGreen;
+}
+
+.active {
+  @apply border-b-[5px] border-solid border-lightGreen  pt-[5px] bg-gradient-to-b from-transparent to-lightGreen;
 }

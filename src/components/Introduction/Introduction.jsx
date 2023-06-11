@@ -5,7 +5,7 @@ import classes from "./Introduction.module.css";
 function Introduction({ language }) {
   console.log(language);
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="section1">
       <img
         className={classes.image}
         src={`${process.env.PUBLIC_URL}/assets/castle-intro${

@@ -231,7 +231,7 @@ function Main({ language }) {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="section2">
       <Navigation
         onClick={switchChapter}
         currentChapter={currentChapter}
