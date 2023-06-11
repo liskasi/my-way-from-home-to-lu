@@ -8,13 +8,18 @@
 
 .item {
   align-self: center;
-  padding: 0 60px;
+  /* padding: 0 60px; */
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: center;
+  @apply px-4 sm:px-14;
   @apply: hover:hover;
   @apply hover:border-b-[5px] hover:border-solid hover:border-lightGreen  hover:pt-[5px] hover:bg-gradient-to-b hover:from-transparent hover:to-lightGreen;
+}
+
+.itemLink {
+  @apply text-sm sm:text-base;
 }
 
 .active {
