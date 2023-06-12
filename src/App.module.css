@@ -19,6 +19,7 @@
 
 .msg {
   text-align: center;
+  display: none;
   /* position: fixed; */
   /* bottom: 0; */
 }
